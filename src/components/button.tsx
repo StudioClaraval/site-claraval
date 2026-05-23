@@ -2,29 +2,11 @@ import { tv, type VariantProps } from 'tailwind-variants';
 import Icon from './icon';
 
 const buttonVariants = tv({
-  base: 'flex items-center justify-center cursor-pointer gap-1 uppercase p-2',
-  variants: {
-    size: {
-      sm: 'h-6.5 text-[10px]',
-      md: 'h-8 text-xs'
-    }
-  },
-  defaultVariants: {
-    size: 'sm'
-  }
+  base: 'flex items-center justify-center cursor-pointer gap-1 uppercase'
 });
 
 const textVariants = tv({
-  base: 'font-bold',
-  variants: {
-    size: {
-      sm: 'text-[10px]',
-      md: 'text-xs'
-    }
-  },
-  defaultVariants: {
-    size: 'sm'
-  }
+  base: 'font-bold'
 });
 
 interface ButtonProps
@@ -37,13 +19,12 @@ interface ButtonProps
 export default function Button({
   className,
   icon,
-  size,
   children,
   ...props
 }: ButtonProps) {
   return (
-    <button className={buttonVariants({ size, className })} {...props}>
-      <span className={textVariants({ size })}>{children}</span>
+    <button className={buttonVariants({ className })} {...props}>
+      <span className={textVariants()}>{children}</span>
       {icon && <Icon svg={icon} />}
     </button>
   );
