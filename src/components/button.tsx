@@ -5,7 +5,8 @@ const buttonVariants = tv({
   base: 'flex items-center justify-center cursor-pointer gap-1 uppercase p-2',
   variants: {
     size: {
-      sm: 'h-6.5 text-[10px]'
+      sm: 'h-6.5 text-[10px]',
+      md: 'h-8 text-xs'
     }
   },
   defaultVariants: {
@@ -17,7 +18,8 @@ const textVariants = tv({
   base: 'font-bold',
   variants: {
     size: {
-      sm: 'text-[10px]'
+      sm: 'text-[10px]',
+      md: 'text-xs'
     }
   },
   defaultVariants: {
