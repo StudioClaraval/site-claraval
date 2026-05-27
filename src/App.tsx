@@ -12,6 +12,7 @@ export default function App() {
       w-full min-h-screen
       bg-[url('./assets/images/background-principal.png')]
       md:bg-[url('./assets/images/background-principal-tablet.png')]
+      lg:bg-[url('./assets/images/background-principal-desktop.png')]
       bg-cover bg-top
       mx-auto flex flex-col items-center
     "
