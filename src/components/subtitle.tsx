@@ -7,10 +7,13 @@ export default function Subtitle() {
       font-inter text-center text-white
       text-[10px] sm:text-xs md:text-[16px]
       leading-3 sm:leading-4
+      lg:ml-13.75 lg:text-start lg:text-[18px]
+      2xl:text-[24px] 2xl:leading-6
     "
     >
-      Design, conteúdo e estratégia alinhados <br /> para gerar crescimento
-      real, não improviso.
+      Design, conteúdo e estratégia <br className="hidden lg:block" /> alinhados{' '}
+      <br className="lg:hidden" /> para gerar crescimento{' '}
+      <br className="hidden lg:block" /> real, não improviso.
     </p>
   );
 }
