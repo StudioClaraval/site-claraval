@@ -30,7 +30,8 @@ export default function TitleAbout() {
       </span>
 
       <span className="flex items-center gap-2">
-        <span>querem crescer</span>
+        <span>querem</span>
+        <span>crescer</span>
         <img
           src={SecondImage}
           alt=""
@@ -44,7 +45,8 @@ export default function TitleAbout() {
           alt=""
           className="flex-1 h-3 object-cover rounded-xs"
         />
-        <span>com consistência.</span>
+        <span>com</span>
+        <span>consistência.</span>
       </span>
     </div>
   );

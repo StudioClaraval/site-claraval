@@ -1,6 +1,6 @@
 export default function SubTitleMotivation() {
   return (
-    <div className="text-white font-inter leading-1.5 text-[6px] mt-15 text-center">
+    <div className="text-white font-inter leading-3 text-[12px] mt-25 text-center">
       <p>
         Vimos de perto marcas sendo tratadas sem estratégia, sem cuidado e sem{' '}
         <br />
