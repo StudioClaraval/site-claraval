@@ -7,7 +7,8 @@ export default function MotivationSection() {
       className="w-full h-75
         bg-[url('./assets/images/background-diamont.png')]
         bg-cover bg-center bg-no-repeat
-        mx-auto flex flex-col items-center lg:items-start"
+        mx-auto flex flex-col items-center
+        rounded-b-[20px]"
     >
       <TitleMotivation />
       <SubTitleMotivation />
