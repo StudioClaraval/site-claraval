@@ -1,6 +1,6 @@
-export default function DescriptionAbout() {
+export default function TitleProjects() {
   return (
-    <p className="w-full text-justify text-[16px] font-bold mt-4.5">
+    <p className="text-[16px] font-bold text-justify">
       Não vendemos serviços soltos ou pacotes,{' '}
       <span className="text-[#A180EC]">
         organizamos a sua marca para funcionar
