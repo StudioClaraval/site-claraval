@@ -3,7 +3,7 @@ import FlechaIcon from '../../assets/icons/flecha.svg?react';
 
 export default function HeroCta() {
   return (
-    <div className="-mx-12 h-77 bg-[url('./assets/images/background-logo.png')] bg-cover bg-center mt-5">
+    <div className="relative left-1/2 -translate-x-1/2 w-screen h-77 bg-[url('./assets/images/background-logo.png')] bg-cover bg-center mt-5">
       <div className="relative">
         <h3 className="text-[10px] text-white text-center uppercase font-oranienbaum pt-22">
           Se você quer parar de <br /> improvisar e começar a <br /> estruturar

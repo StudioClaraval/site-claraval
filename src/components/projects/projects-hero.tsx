@@ -1,99 +1,65 @@
-import { useLayoutEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import { useState, useEffect, useCallback } from 'react';
 import socialMediaProject from '../../assets/images/social-media-project.png';
 import visualIdentityProject from '../../assets/images/visual-identity-project.png';
 import releasesProject from '../../assets/images/releases-project.png';
 import pagesProject from '../../assets/images/pages-project.png';
 import moreProjects from '../../assets/images/more-projects.png';
 
-import TitleProjects from './title-projects';
-
-gsap.registerPlugin(ScrollTrigger);
-
 const projects = [
   socialMediaProject,
   visualIdentityProject,
-  releasesProject,
   pagesProject,
+  releasesProject,
   moreProjects
 ];
 
-const CARD_AREA_HEIGHT = 480;
+const INTERVAL = 4000;
+const DURATION = 500;
 
 export default function ProjectsHero() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const imagesRef = useRef<HTMLImageElement[]>([]);
+  const [current, setCurrent] = useState(0);
+  const [animating, setAnimating] = useState(false);
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      const images = imagesRef.current;
-
-      gsap.set(images, {
-        xPercent: 0,
-        rotation: 0,
-        opacity: 1
-      });
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top top',
-          end: `+=${projects.length * 250}`,
-          scrub: true,
-          pin: true,
-          anticipatePin: 1,
-          invalidateOnRefresh: true
-        }
-      });
-
-      images.forEach((image, index) => {
-        tl.to(
-          image,
-          {
-            xPercent: -130,
-            rotation: -14,
-            opacity: 0.1,
-            ease: 'none',
-            duration: 1
-          },
-          index
-        );
-      });
-    }, containerRef);
-
-    return () => ctx.revert();
+  const advance = useCallback(() => {
+    setAnimating(true);
+    setTimeout(() => {
+      setCurrent((prev) => (prev + 1) % projects.length);
+      setAnimating(false);
+    }, DURATION);
   }, []);
 
-  return (
-    <section
-      ref={containerRef}
-      className="relative overflow-hidden"
-      style={{ height: CARD_AREA_HEIGHT }}
-    >
-      <div className="flex h-full flex-col">
-        <div className="py-6">
-          <TitleProjects />
-        </div>
+  useEffect(() => {
+    const timer = setInterval(advance, INTERVAL);
+    return () => clearInterval(timer);
+  }, [advance]);
 
-        <div className="relative flex-1">
-          {projects.map((src, index) => (
-            <img
-              key={src}
-              ref={(el) => {
-                if (el) imagesRef.current[index] = el;
-              }}
-              src={src}
-              className="absolute inset-0 h-full w-full object-contain"
-              style={{
-                zIndex: projects.length - index,
-                willChange: 'transform, opacity'
-              }}
-            />
-          ))}
-        </div>
-      </div>
+  const next = (current + 1) % projects.length;
+
+  return (
+    <section className="relative w-full overflow-hidden mt-4 -mb-7 z-1">
+      <img src={projects[0]} alt="" className="w-full invisible" />
+      <img
+        src={projects[current]}
+        alt=""
+        className="absolute inset-0 w-full"
+        style={{
+          transition: animating
+            ? `transform ${DURATION}ms cubic-bezier(0.4, 0, 0.2, 1)`
+            : 'none',
+          transform: animating ? 'translateX(-100%)' : 'translateX(0)'
+        }}
+      />
+      <img
+        src={projects[next]}
+        alt=""
+        className="absolute inset-0 w-full"
+        style={{
+          transition: animating
+            ? `transform ${DURATION}ms cubic-bezier(0.4, 0, 0.2, 1)`
+            : 'none',
+          transform: animating ? 'translateX(0)' : 'translateX(100%)'
+        }}
+      />
     </section>
   );
 }
