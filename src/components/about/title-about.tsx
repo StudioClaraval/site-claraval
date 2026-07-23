@@ -4,7 +4,7 @@ import TertiaryImage from '../../assets/images/tertiary-image-about.png';
 
 export default function TitleAbout() {
   return (
-    <div className="text-[16px] text-center font-bold">
+    <div className="text-[16px] text-center font-bold sm:text-[36px] lg:text-[46px]">
       <span className="flex justify-between">
         <span>Hoje,</span>
         <span>unimos</span>
@@ -18,7 +18,7 @@ export default function TitleAbout() {
         <img
           src={FirstImage}
           alt=""
-          className="flex-1 h-3 object-cover rounded-xs"
+          className="flex-1 h-3 object-cover rounded-xs sm:h-7 lg:h-10"
         />
       </span>
 
@@ -35,7 +35,7 @@ export default function TitleAbout() {
         <img
           src={SecondImage}
           alt=""
-          className="flex-1 h-3 object-cover rounded-xs"
+          className="flex-1 h-3 object-cover rounded-xs sm:h-7 lg:h-10"
         />
       </span>
 
@@ -43,7 +43,7 @@ export default function TitleAbout() {
         <img
           src={TertiaryImage}
           alt=""
-          className="flex-1 h-3 object-cover rounded-xs"
+          className="flex-1 h-3 object-cover rounded-xs sm:h-7 lg:h-10"
         />
         <span>com</span>
         <span>consistência.</span>

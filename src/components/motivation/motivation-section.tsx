@@ -6,9 +6,11 @@ export default function MotivationSection() {
     <section
       className="w-full h-75
         bg-[url('./assets/images/background-diamont.png')]
-        bg-cover bg-center bg-no-repeat
+        bg-cover max-lg:bg-center mx-lg:bg-no-repeat
         mx-auto flex flex-col items-center
-        rounded-b-[20px]"
+        rounded-b-[20px]
+        lg:bg-[url('./assets/images/background-diamont-tablet.png')]
+        lg:bg-cover lg:h-140"
     >
       <TitleMotivation />
       <SubTitleMotivation />

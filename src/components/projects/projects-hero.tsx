@@ -4,13 +4,26 @@ import visualIdentityProject from '../../assets/images/visual-identity-project.p
 import releasesProject from '../../assets/images/releases-project.png';
 import pagesProject from '../../assets/images/pages-project.png';
 import moreProjects from '../../assets/images/more-projects.png';
+import socialMediaProjectTablet from '../../assets/images/social-media-project-tablet.png';
+import visualIdentityProjectTablet from '../../assets/images/visual-identity-project-tablet.png';
+import releasesProjectTablet from '../../assets/images/releases-project-tablet.png';
+import pagesProjectTablet from '../../assets/images/pages-project-tablet.png';
+import moreProjectsTablet from '../../assets/images/more-projects-tablet.png';
 
-const projects = [
+const projectsMobile = [
   socialMediaProject,
   visualIdentityProject,
   pagesProject,
   releasesProject,
   moreProjects
+];
+
+const projectsTablet = [
+  socialMediaProjectTablet,
+  visualIdentityProjectTablet,
+  pagesProjectTablet,
+  releasesProjectTablet,
+  moreProjectsTablet
 ];
 
 const INTERVAL = 4000;
@@ -19,11 +32,22 @@ const DURATION = 500;
 export default function ProjectsHero() {
   const [current, setCurrent] = useState(0);
   const [animating, setAnimating] = useState(false);
+  const [isLg, setIsLg] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)');
+    setIsLg(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsLg(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+
+  const projects = isLg ? projectsTablet : projectsMobile;
 
   const advance = useCallback(() => {
     setAnimating(true);
     setTimeout(() => {
-      setCurrent((prev) => (prev + 1) % projects.length);
+      setCurrent((prev) => (prev + 1) % projectsMobile.length);
       setAnimating(false);
     }, DURATION);
   }, []);
@@ -36,7 +60,7 @@ export default function ProjectsHero() {
   const next = (current + 1) % projects.length;
 
   return (
-    <section className="relative w-full overflow-hidden mt-4 -mb-7 z-1">
+    <section className="relative w-full overflow-hidden mt-4 -mb-7 z-1 sm:-mb-14 lg:-mb-65">
       <img src={projects[0]} alt="" className="w-full invisible" />
       <img
         src={projects[current]}

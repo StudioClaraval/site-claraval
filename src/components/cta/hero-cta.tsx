@@ -1,11 +1,11 @@
-import Button from '../hero/button';
 import FlechaIcon from '../../assets/icons/flecha.svg?react';
+import ButtonCta from './button-cta';
 
 export default function HeroCta() {
   return (
-    <div className="relative left-1/2 -translate-x-1/2 w-screen h-77 bg-[url('./assets/images/background-logo.png')] bg-cover bg-center mt-5">
+    <div className="relative left-1/2 -translate-x-1/2 w-screen h-77 bg-[url('./assets/images/background-logo.png')] bg-cover bg-center mt-5 sm:h-150 lg:h-200 lg:mt-18">
       <div className="relative">
-        <h3 className="text-[10px] text-white text-center uppercase font-oranienbaum pt-22">
+        <h3 className="text-[10px] text-white text-center uppercase font-oranienbaum pt-22 sm:pt-48 sm:text-[22px] lg:text-[34px] lg:pt-55">
           Se você quer parar de <br /> improvisar e começar a <br /> estruturar
           sua marca, <br />{' '}
           <span className="text-[#332553]">
@@ -13,7 +13,7 @@ export default function HeroCta() {
           </span>
           .
         </h3>
-        <Button
+        <ButtonCta
           icon={FlechaIcon}
           type="button"
           className="
@@ -23,10 +23,14 @@ export default function HeroCta() {
           p-2 text-[8px]
           bg-[#A180EC]/80
           shadow-[0_0_2.776px_0_#A180EC]
+          sm:text-[16px]
+          lg:mt-7.5
+          lg:text-[24px]
+          lg:rounded-2xl
         "
         >
           Fale com a sua âgencia
-        </Button>
+        </ButtonCta>
       </div>
     </div>
   );
