@@ -17,9 +17,11 @@ export default function AboutHero() {
           consequentemente sobre o mercado de marketing e essa insatisfação
           virou decisão.
         </p>
-        <p className="lg:mt-5">
-          Em 2024, a Samy entra como sócia, somando estratégia de conteúdo,
-          visão de posicionamento e direção de comunicação.
+        <p className="mt-4">
+          Em 2022, a Gaby iniciou o Studio com foco em design, trazendo
+          profundidade e intenção para cada projeto. Em 2024, a Samy entra como
+          sócia, somando estratégia de conteúdo, visão de posicionamento e
+          direção de comunicação.
         </p>
         <h3 className="font-oranienbaum text-[18px] font-bold text-[#5B4986] mt-4 uppercase sm:text-[24px] lg:text-[38px] lg:mt-auto">
           A união não foi só profissional, foi construída sobre confiança, visão
