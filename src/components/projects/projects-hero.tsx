@@ -60,7 +60,7 @@ export default function ProjectsHero() {
   const next = (current + 1) % projects.length;
 
   return (
-    <section className="relative w-full overflow-hidden mt-4 -mb-7 z-1 sm:-mb-14 lg:-mb-65">
+    <section className="relative w-full overflow-hidden mt-4 -mb-7 z-1 sm:-mb-14 sm:mt-8 lg:-mb-65">
       <img src={projects[0]} alt="" className="w-full invisible" />
       <img
         src={projects[current]}

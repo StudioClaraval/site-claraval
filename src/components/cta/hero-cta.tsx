@@ -1,7 +1,14 @@
 import FlechaIcon from '../../assets/icons/flecha.svg?react';
 import ButtonCta from './button-cta';
 
+const FORM_URL =
+  'https://docs.google.com/forms/d/1A5Jw-8k6k6AS52feKhHD_jw8HRR5-GAOWXPrsj487f8/viewform?edit_requested=true';
+
 export default function HeroCta() {
+  function handleClick() {
+    window.open(FORM_URL, '_blank', 'noopener,noreferrer');
+  }
+
   return (
     <div className="relative left-1/2 -translate-x-1/2 w-screen h-77 bg-[url('./assets/images/background-logo.png')] bg-cover bg-center mt-5 sm:h-150 lg:h-200 lg:mt-18">
       <div className="relative">
@@ -23,11 +30,12 @@ export default function HeroCta() {
           p-2 text-[8px]
           bg-[#A180EC]/80
           shadow-[0_0_2.776px_0_#A180EC]
-          sm:text-[16px]
+          sm:text-[15px]
           lg:mt-7.5
           lg:text-[24px]
           lg:rounded-2xl
         "
+          onClick={handleClick}
         >
           Fale com a sua âgencia
         </ButtonCta>

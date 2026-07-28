@@ -9,8 +9,9 @@ export default function MotivationSection() {
         bg-cover max-lg:bg-center mx-lg:bg-no-repeat
         mx-auto flex flex-col items-center
         rounded-b-[20px]
+        sm:h-82
         lg:bg-[url('./assets/images/background-diamont-tablet.png')]
-        lg:bg-cover lg:h-140"
+        lg:bg-cover lg:h-[620px]"
     >
       <TitleMotivation />
       <SubTitleMotivation />

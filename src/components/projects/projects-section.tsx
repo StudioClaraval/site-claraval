@@ -3,7 +3,7 @@ import TitleProjects from './title-projects';
 
 export default function ProjectsSection() {
   return (
-    <section className="mx-12 sm:mx-20 lg:mx-30">
+    <section className="w-fit mx-auto px-12 sm:px-18">
       <TitleProjects />
       <ProjectsHero />
     </section>
