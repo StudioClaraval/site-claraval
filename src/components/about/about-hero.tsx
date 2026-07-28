@@ -1,5 +1,4 @@
 import AboutPrincipal from '../../assets/images/about-hero-mobile.png';
-import AboutPrincipalTablet from '../../assets/images/about-hero.png';
 
 export default function AboutHero() {
   return (
