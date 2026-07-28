@@ -38,7 +38,7 @@ export default function HeroCta() {
         "
           onClick={handleClick}
         >
-          Fale com a sua âgencia
+          Fale com a sua agência
         </ButtonCta>
       </div>
     </div>
