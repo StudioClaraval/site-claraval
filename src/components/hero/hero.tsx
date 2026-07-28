@@ -22,10 +22,9 @@ export default function Hero() {
         md:bg-[url('./assets/images/background-hero-tablet.png')]
         lg:bg-[url('./assets/images/background-hero-desktop.png')]
         bg-cover bg-top
-        mx-auto flex flex-col items-center lg:items-start
       "
     >
-      <div className="flex flex-col items-center lg:items-start lg:ml-8">
+      <div className="max-w-[1536px] mx-auto w-full flex flex-col items-center lg:items-start lg:ml-8">
         <div className="mt-6 sm:mt-16 lg:mt-55 xl:mt-60">
           <LogoIcon className="block md:hidden" />
           <LogoTabletIcon className="hidden md:block lg:hidden" />
@@ -43,9 +42,10 @@ export default function Hero() {
             p-2 text-[10px]
             bg-[#A180EC]/80
             shadow-[0_0_2.776px_0_#A180EC] md:shadow-[0_0_4.494px_0_A180EC]
-            sm:h-8 sm:text-xs sm:p-3 sm:gap-1.5 md:h-11 md:text-[16px]
+            sm:h-8 sm:text-xs sm:p-3 sm:gap-1.5 md:h-11 md:text-[14px]
             lg:max-w-70 lg:text-[14px]
             xl:max-w-90 xl:text-[20px]
+            2xl:max-w-100
           "
           onClick={handleClick}
         >

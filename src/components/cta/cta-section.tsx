@@ -4,10 +4,12 @@ import TitleCta from './title-cta';
 
 export default function CTASection() {
   return (
-    <section className="h-125.5 bg-[url('./assets/images/background-cta.png')] bg-cover mx-6 mt-2 relative sm:h-212 lg:h-300 lg:mx-30">
-      <TitleCta />
-      <SubtitleCta />
-      <HeroCta />
+    <section className="h-125.5 w-full bg-[url('./assets/images/background-cta.png')] bg-cover mt-2 relative sm:h-212 lg:h-300">
+      <div className="max-w-[1536px] mx-auto w-full h-full px-6 lg:px-30">
+        <TitleCta />
+        <SubtitleCta />
+        <HeroCta />
+      </div>
     </section>
   );
 }

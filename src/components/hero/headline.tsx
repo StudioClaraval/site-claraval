@@ -10,6 +10,7 @@ export default function Headline() {
       lg:text-start lg:text-[30px]
       lg:leading-12
       xl:text-[38px]
+      2xl:text-[44px]
     "
     >
       <span className="text-[#5B4986]">Construímos</span> marcas{' '}

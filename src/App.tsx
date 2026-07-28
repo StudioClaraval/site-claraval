@@ -8,7 +8,7 @@ import ProjectsSection from './components/projects/projects-section';
 
 export default function App() {
   return (
-    <>
+    <div className="">
       <Hero />
       <MotivationSection />
       <AboutSection />
@@ -16,6 +16,6 @@ export default function App() {
       <FeedbackSection />
       <CTASection />
       <Footer />
-    </>
+    </div>
   );
 }

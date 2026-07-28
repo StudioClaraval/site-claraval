@@ -3,9 +3,11 @@ import TitleAbout from './title-about';
 
 export default function AboutSection() {
   return (
-    <section className="mt-5.5 flex-flex-col items-center mx-12 sm:mx-20 lg:mx-35 lg:mt-15 xl:mx-60">
-      <TitleAbout />
-      <AboutHero />
+    <section className="w-full mt-5.5 lg:mt-15">
+      <div className="max-w-[1536px] mx-auto w-full px-12 sm:px-20 lg:px-35 xl:px-60 2xl:px-80">
+        <TitleAbout />
+        <AboutHero />
+      </div>
     </section>
   );
 }
