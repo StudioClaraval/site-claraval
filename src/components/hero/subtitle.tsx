@@ -8,7 +8,7 @@ export default function Subtitle() {
       text-[10px] sm:text-xs md:text-[16px]
       leading-3 sm:leading-4
       lg:text-start lg:text-[18px]
-      2xl:text-[18px] 2xl:leading-5
+      xl:text-[20px] xl:leading-5
     "
     >
       Design, conteúdo e estratégia <br className="hidden lg:block" /> alinhados{' '}

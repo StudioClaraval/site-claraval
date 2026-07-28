@@ -9,7 +9,7 @@ export default function Headline() {
       leading-6.5 sm:leading-9 md:leading-11
       lg:text-start lg:text-[30px]
       lg:leading-12
-      2xl:text-[60px] 2xl:leading-15
+      xl:text-[38px]
     "
     >
       <span className="text-[#5B4986]">Construímos</span> marcas{' '}

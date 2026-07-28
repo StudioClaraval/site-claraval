@@ -4,7 +4,7 @@ import TertiaryImage from '../../assets/images/tertiary-image-about.png';
 
 export default function TitleAbout() {
   return (
-    <div className="text-[13px] text-center font-bold xs:text-[20px] sm:text-[30px] lg:text-[34px]">
+    <div className="text-[13px] text-center font-bold xs:text-[20px] sm:text-[30px] lg:text-[34px] xl:text-[42px]">
       <span className="flex justify-between">
         <span>Hoje,</span>
         <span>unimos</span>
