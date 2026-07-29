@@ -7,14 +7,15 @@ export default function Headline() {
       font-oranienbaum text-center uppercase
       text-[26px] sm:text-[34px] md:text-[45px]
       leading-6.5 sm:leading-9 md:leading-11
-      lg:text-start lg:text-[30px]
-      lg:leading-12
-      xl:text-[38px]
-      2xl:text-[44px]
+      lg:text-start lg:text-[40px]
+      xl:text-[52px] xl:leading-12
+      2xl:text-[66px] 2xl:leading-15
     "
     >
-      <span className="text-[#5B4986]">Construímos</span> marcas{' '}
-      <br className="lg:hidden" /> e <br className="hidden lg:block" />{' '}
+      <span className="text-[#5B4986]">
+        Construímos <br className="hidden lg:block" />
+      </span>{' '}
+      marcas <br className="lg:hidden" /> e <br className="hidden lg:block" />{' '}
       posicionamento{' '}
       <span className="text-[#5B4986]">
         <br />

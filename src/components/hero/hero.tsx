@@ -24,8 +24,8 @@ export default function Hero() {
         bg-cover bg-top
       "
     >
-      <div className="max-w-[1536px] mx-auto w-full flex flex-col items-center lg:items-start lg:ml-8">
-        <div className="mt-6 sm:mt-16 lg:mt-55 xl:mt-60">
+      <div className="max-w-384 mx-auto w-full flex flex-col items-center lg:items-start lg:ml-8">
+        <div className="mt-6 sm:mt-16 lg:mt-50 xl:mt-55">
           <LogoIcon className="block md:hidden" />
           <LogoTabletIcon className="hidden md:block lg:hidden" />
           <LogoDesktopIcon className="hidden lg:block" />
@@ -36,16 +36,18 @@ export default function Hero() {
           icon={FlechaIcon}
           type="button"
           className="
-            border border-[#A180EC] rounded-[3px] md:rounded-[5px] md:w-full md:max-w-74
-            mt-2.5 sm:mt-4
+            top-full border border-[#A180EC] rounded-[3px]
+            mt-1
             font-inter text-white
-            p-2 text-[10px]
+            p-2 text-[8px]
             bg-[#A180EC]/80
-            shadow-[0_0_2.776px_0_#A180EC] md:shadow-[0_0_4.494px_0_A180EC]
-            sm:h-8 sm:text-xs sm:p-3 sm:gap-1.5 md:h-11 md:text-[14px]
-            lg:max-w-70 lg:text-[14px]
-            xl:max-w-90 xl:text-[20px]
-            2xl:max-w-100
+            shadow-[0_0_2.776px_0_#A180EC]
+            sm:text-[15px]
+            lg:mt-4.5
+            lg:text-[12px]
+            lg:rounded-2xl
+            xl:text-[16px] xl:p-4
+            2xl:text-[20px]
           "
           onClick={handleClick}
         >

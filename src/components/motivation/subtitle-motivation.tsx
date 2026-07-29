@@ -1,6 +1,10 @@
 export default function SubTitleMotivation() {
   return (
-    <div className="text-white font-inter leading-3 text-[10px] mt-32 text-center px-6 sm:text-[14px] sm:leading-4 sm:mt-30 sm:mx-20 lg:text-[20px] lg:leading-6 lg:mt-60 lg:mx-40 xl:mt-68">
+    <div
+      className="text-white font-inter leading-3 text-[10px] mt-26 text-center px-6 
+      sm:text-[14px] sm:leading-4 sm:mt-30 sm:mx-20 lg:text-[20px] lg:leading-6 lg:mt-60 
+      lg:mx-65 xl:mt-68 xl:mx-75 2xl:mx-85"
+    >
       <p>
         Vimos de perto marcas sendo tratadas sem estratégia, sem cuidado e sem
         direção. Projetos atrasados, comunicação falha e decisões tomadas sem
