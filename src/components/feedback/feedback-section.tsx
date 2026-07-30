@@ -1,5 +1,3 @@
-// feedback-section.tsx
-import Catchphrase from './catchphrase';
 import HeroFeedback from './hero-feedback';
 import TitleFeedback from './title-feedback';
 
@@ -14,7 +12,6 @@ export default function FeedbackSection() {
         <div className="max-w-384 mx-auto w-full">
           <TitleFeedback />
           <HeroFeedback />
-          <Catchphrase />
         </div>
       </div>
     </section>
